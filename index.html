@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OJT Portfolio | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">OJT<span>Portfolio</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#journal">Work Journal</a></li>
+                <li><a href="#photos">Documentation</a></li>
+                <li><a href="#documents">Documents</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <!-- TEMPLATE: Replace with your actual company name and role -->
+            <span class="badge">OJT Graduate @ [Company Name Here]</span>
+            <h1>Hi, I'm [Your Name Here]</h1>
+            <p>Welcome to my official On-the-Job Training portfolio, documenting my professional growth, technical contributions, and experiences in the industry.</p>
+            <div class="hero-btns">
+                <a href="#journal" class="btn primary">View My Journal</a>
+                <a href="#documents" class="btn secondary">OJT Files</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me & The Company</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>My OJT Role</h3>
+                    <p>[Write a brief description of what you did. For example: As a Web Development Intern, I assisted the engineering team in building responsive user interfaces and fixing frontend bugs.]</p>
+                </div>
+                <div class="about-card">
+                    <h3>About [Company Name]</h3>
+                    <p>[Write a paragraph about the company you trained at. Mention their core industry, culture, and what type of services or products they provide.]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Journal Section (Interactive Accordion) -->
+    <section id="journal" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Weekly Work Journal</h2>
+            <p class="section-subtitle">Click on a week to view the specific tasks and learnings accomplished.</p>
+            
+            <div class="accordion-container">
+                <!-- Week 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">Week 1: Company Orientation & Onboarding</button>
+                    <div class="accordion-content">
+                        <p><strong>Tasks Completed:</strong> Attended the corporate onboarding session, set up my local development environment, and met with my industry supervisor.</p>
+                        <p><strong>Key Learnings:</strong> Learned about corporate git workflows, branching strategies, and internal security protocols.</p>
+                    </div>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">Week 2: Initial Task Assignment</button>
+                    <div class="accordion-content">
+                        <p><strong>Tasks Completed:</strong> [Replace with your tasks] Began writing unit tests for the login module and refactored older UI styling elements.</p>
+                        <p><strong>Key Learnings:</strong> [Replace with your learnings] Mastered advanced CSS flexbox techniques and deepened my knowledge of test-driven development.</p>
+                    </div>
+                </div>
+
+                <!-- Week 3 (Template Duplicate) -->
+                <div class="accordion-item">
+                    <button class="accordion-header">Week 3: [Add Your Title Here]</button>
+                    <div class="accordion-content">
+                        <p><strong>Tasks Completed:</strong> [Add your weekly data here...]</p>
+                        <p><strong>Key Learnings:</strong> [Add your weekly data here...]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Documentation Section (Interactive Gallery) -->
+    <section id="photos" class="section">
+        <div class="container">
+            <h2 class="section-title">Photo Documentation</h2>
+            <div class="gallery-grid">
+                <!-- TEMPLATE: Replace 'placeholder.jpg' with your real images later -->
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400" alt="Workspace Setup" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">My Workspace & Daily Setup</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400" alt="Team Meeting" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">Weekly Sync with the Dev Team</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400" alt="Final Presentation" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">Presenting my Final OJT Project</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OJT Documents Section -->
+    <section id="documents" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Official OJT Documents</h2>
+            <div class="docs-grid">
+                <!-- Card 1 -->
+                <div class="doc-card">
+                    <div class="doc-icon">📄</div>
+                    <h3>Endorsement Letter</h3>
+                    <p>Official university endorsement letter submitted to the company.</p>
+                    <a href="#" target="_blank" class="doc-link">View Document</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="doc-card">
+                    <div class="doc-icon">⏳</div>
+                    <h3>Daily Time Record (DTR)</h3>
+                    <p>Logsheet containing the complete breakdown of compiled OJT hours.</p>
+                    <a href="#" target="_blank" class="doc-link">View Document</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="doc-card">
+                    <div class="doc-icon">🏆</div>
+                    <h3>Certificate of Completion</h3>
+                    <p>Signed certification validating the fulfillment of required internship hours.</p>
+                    <a href="#" target="_blank" class="doc-link">View Document</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Lightbox Modal for Photos -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged View">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 [Your Name]. Built from scratch for OJT Portfolio Submission.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
