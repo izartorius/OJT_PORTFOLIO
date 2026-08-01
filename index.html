@@ -91,35 +91,49 @@
         </div>
     </section>
 
-    <!-- Photo Documentation Section (Interactive Gallery) -->
+    <!-- Photo Documentation Section (Now Using PDF IFrames) -->
     <section id="photos" class="section">
         <div class="container">
             <h2 class="section-title">Photo Documentation</h2>
-            <div class="gallery-grid">
-                <!-- Week 1 -->
-                <div class="gallery-item">
-                    <img id="photo-week-1" src="https://via.placeholder.com/600x400" alt="Week 1" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">Week 1</div>
-                    <div class="upload-controls" style="padding: 10px; text-align: center;">
-                        <input type="file" accept="image/*" onchange="handleImageUpload(event, 'photo-week-1')" style="font-size: 0.8rem;">
+            <p class="section-subtitle">Toggle to view weekly photo documentation PDFs.</p>
+            
+            <div class="reports-grid" style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- Week 1 Photos Card -->
+                <div class="report-card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <h3>Week 1 Photos</h3>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <button class="btn primary" onclick="togglePdf('photo-container-1')">Toggle PDF</button>
+                        </div>
+                    </div>
+                    <div id="photo-container-1" class="pdf-container" style="display: none; margin-top: 15px;">
+                        <iframe src="documents/week1-photos.pdf" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
                     </div>
                 </div>
 
-                <!-- Week 2 -->
-                <div class="gallery-item">
-                    <img id="photo-week-2" src="https://via.placeholder.com/600x400" alt="Week 2" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">Week 2</div>
-                    <div class="upload-controls" style="padding: 10px; text-align: center;">
-                        <input type="file" accept="image/*" onchange="handleImageUpload(event, 'photo-week-2')" style="font-size: 0.8rem;">
+                <!-- Week 2 Photos Card -->
+                <div class="report-card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <h3>Week 2 Photos</h3>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <button class="btn primary" onclick="togglePdf('photo-container-2')">Toggle PDF</button>
+                        </div>
+                    </div>
+                    <div id="photo-container-2" class="pdf-container" style="display: none; margin-top: 15px;">
+                        <iframe src="documents/week2-photos.pdf" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
                     </div>
                 </div>
 
-                <!-- Week 3 -->
-                <div class="gallery-item">
-                    <img id="photo-week-3" src="https://via.placeholder.com/600x400" alt="Week 3" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">Week 3</div>
-                    <div class="upload-controls" style="padding: 10px; text-align: center;">
-                        <input type="file" accept="image/*" onchange="handleImageUpload(event, 'photo-week-3')" style="font-size: 0.8rem;">
+                <!-- Week 3 Photos Card -->
+                <div class="report-card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <h3>Week 3 Photos</h3>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <button class="btn primary" onclick="togglePdf('photo-container-3')">Toggle PDF</button>
+                        </div>
+                    </div>
+                    <div id="photo-container-3" class="pdf-container" style="display: none; margin-top: 15px;">
+                        <iframe src="documents/week3-photos.pdf" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
                     </div>
                 </div>
             </div>
@@ -205,18 +219,12 @@
         </div>
     </section>
 
-    <!-- Interactive Lightbox Modal for Photos -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close-btn">&times;</span>
-        <img id="lightbox-img" src="" alt="Enlarged View">
-    </div>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Mark Joseph R. Mendez. Built from scratch for OJT Portfolio Submission.</p>
     </footer>
 
-    <!-- Custom JavaScript for PDF/Image Uploads and Toggling -->
+    <!-- Custom JavaScript for PDF Toggling Only -->
     <script>
         // Toggle PDF view visibility
         function togglePdf(containerId) {
@@ -225,20 +233,6 @@
                 container.style.display = "block";
             } else {
                 container.style.display = "none";
-            }
-        }
-
-        // Handle dynamic Image uploads for Photo Documentation
-        function handleImageUpload(event, imgId) {
-            const file = event.target.files[0];
-            if (file && file.type.startsWith("image/")) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById(imgId).src = e.target.result;
-                };
-                reader.readAsDataURL(file);
-            } else {
-                alert("Please select a valid image file.");
             }
         }
     </script>
