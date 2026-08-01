@@ -130,7 +130,7 @@
     <section id="reports" class="section alt-bg">
         <div class="container">
             <h2 class="section-title">Weekly Reports</h2>
-            <p class="section-subtitle">Upload or toggle to view weekly PDF report documents.</p>
+            <p class="section-subtitle">Toggle to view weekly PDF report documents.</p>
             
             <div class="reports-grid" style="display: flex; flex-direction: column; gap: 20px;">
                 <!-- Week 1 Report Card -->
@@ -138,12 +138,11 @@
                     <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <h3>Week 1 Report</h3>
                         <div style="display: flex; gap: 10px; align-items: center;">
-                            <input type="file" accept="application/pdf" onchange="handlePdfUpload(event, 'pdf-frame-1', 'pdf-container-1')" style="font-size: 0.85rem;">
                             <button class="btn primary" onclick="togglePdf('pdf-container-1')">Toggle Report PDF</button>
                         </div>
                     </div>
                     <div id="pdf-container-1" class="pdf-container" style="display: none; margin-top: 15px;">
-                        <iframe id="pdf-frame-1" src="" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
+                        <iframe id="pdf-frame-1" src="documents/baytech-weekly-report1.pdf" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
                     </div>
                 </div>
 
@@ -152,12 +151,11 @@
                     <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <h3>Week 2 Report</h3>
                         <div style="display: flex; gap: 10px; align-items: center;">
-                            <input type="file" accept="application/pdf" onchange="handlePdfUpload(event, 'pdf-frame-2', 'pdf-container-2')" style="font-size: 0.85rem;">
                             <button class="btn primary" onclick="togglePdf('pdf-container-2')">Toggle Report PDF</button>
                         </div>
                     </div>
                     <div id="pdf-container-2" class="pdf-container" style="display: none; margin-top: 15px;">
-                        <iframe id="pdf-frame-2" src="" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
+                        <iframe id="pdf-frame-2" src="documents/baytech-weekly-report2.pdf" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
                     </div>
                 </div>
 
@@ -166,12 +164,11 @@
                     <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <h3>Week 3 Report</h3>
                         <div style="display: flex; gap: 10px; align-items: center;">
-                            <input type="file" accept="application/pdf" onchange="handlePdfUpload(event, 'pdf-frame-3', 'pdf-container-3')" style="font-size: 0.85rem;">
                             <button class="btn primary" onclick="togglePdf('pdf-container-3')">Toggle Report PDF</button>
                         </div>
                     </div>
                     <div id="pdf-container-3" class="pdf-container" style="display: none; margin-top: 15px;">
-                        <iframe id="pdf-frame-3" src="" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
+                        <iframe id="pdf-frame-3" src="documents/baytech-weekly-report3.pdf" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
                     </div>
                 </div>
             </div>
@@ -228,21 +225,6 @@
                 container.style.display = "block";
             } else {
                 container.style.display = "none";
-            }
-        }
-
-        // Handle dynamic PDF uploads (preview instantly in browser)
-        function handlePdfUpload(event, iframeId, containerId) {
-            const file = event.target.files[0];
-            if (file && file.type === "application/pdf") {
-                const fileURL = URL.createObjectURL(file);
-                const iframe = document.getElementById(iframeId);
-                iframe.src = fileURL;
-                
-                // Show container upon upload
-                document.getElementById(containerId).style.display = "block";
-            } else {
-                alert("Please select a valid PDF file.");
             }
         }
 
