@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OJT Portfolio | Your Name</title>
+    <title>OJT Portfolio | Mark Joseph R. Mendez</title>
     <link rel="stylesheet" href="index.css">
     <!-- Google Fonts for professional typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,6 +18,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#journal">Work Journal</a></li>
                 <li><a href="#photos">Documentation</a></li>
+                <li><a href="#reports">Weekly Reports</a></li>
                 <li><a href="#documents">Documents</a></li>
             </ul>
         </div>
@@ -26,9 +27,8 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <!-- TEMPLATE: Replace with your actual company name and role -->
-            <span class="badge">Intern @ [Baytech BPO Corporation]</span>
-            <h1>Hi, I'm [Mark Joseph R. Mendez]</h1>
+            <span class="badge">Intern @ Baytech BPO Corporation</span>
+            <h1>Hi, I'm Mark Joseph R. Mendez</h1>
             <p>Welcome to my official On-the-Job Training portfolio, documenting my professional growth, technical contributions, and experiences in the industry.</p>
             <div class="hero-btns">
                 <a href="#journal" class="btn primary">View My Journal</a>
@@ -44,11 +44,11 @@
             <div class="about-grid">
                 <div class="about-card">
                     <h3>My OJT Role</h3>
-                    <p>[I am a Quality Assurance Tester, and I help the team by thoroughly testing the software the developers deploy in order to provide a hassle-free service to our consumers.]</p>
+                    <p>I am a Quality Assurance Tester, and I help the team by thoroughly testing the software the developers deploy in order to provide a hassle-free service to our consumers.</p>
                 </div>
                 <div class="about-card">
-                    <h3>About [Baytech BPO Corporation]</h3>
-                    <p>[Baytech is a tech firm which provides services not just locally, but on a global scale as well. Our products mostly consist of LLMs and SAAS in which we constantly monitor, test, and improve to fit our consumers' needs. Here at Baytech, work is taken very seriously but fun at the same time. There are lots of amazing people, and a fitting environment for learning and growth.]</p>
+                    <h3>About Baytech BPO Corporation</h3>
+                    <p>Baytech is a tech firm which provides services not just locally, but on a global scale as well. Our products mostly consist of LLMs and SAAS in which we constantly monitor, test, and improve to fit our consumers' needs. Here at Baytech, work is taken very seriously but fun at the same time. There are lots of amazing people, and a fitting environment for learning and growth.</p>
                 </div>
             </div>
         </div>
@@ -79,12 +79,12 @@
                     </div>
                 </div>
 
-                <!-- Week 3 (Template Duplicate) -->
+                <!-- Week 3 -->
                 <div class="accordion-item">
-                    <button class="accordion-header">Week 3: [Add Your Title Here]</button>
+                    <button class="accordion-header">Week 3: Test Case Assignments</button>
                     <div class="accordion-content">
-                        <p><strong>Tasks Completed:</strong> [Add your weekly data here...]</p>
-                        <p><strong>Key Learnings:</strong> [Add your weekly data here...]</p>
+                        <p><strong>Tasks Completed:</strong> Completed assigned critical checklists and test cases for practice testing.</p>
+                        <p><strong>Key Learnings:</strong> Learned about regression testing by doing critical checklists and test planning from doing test cases.</p>
                     </div>
                 </div>
             </div>
@@ -96,25 +96,90 @@
         <div class="container">
             <h2 class="section-title">Photo Documentation</h2>
             <div class="gallery-grid">
-                <!-- TEMPLATE: Replace 'placeholder.jpg' with your real images later -->
+                <!-- Week 1 -->
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Workspace Setup" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">My Workspace & Daily Setup</div>
+                    <img id="photo-week-1" src="https://via.placeholder.com/600x400" alt="Week 1" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">Week 1</div>
+                    <div class="upload-controls" style="padding: 10px; text-align: center;">
+                        <input type="file" accept="image/*" onchange="handleImageUpload(event, 'photo-week-1')" style="font-size: 0.8rem;">
+                    </div>
                 </div>
+
+                <!-- Week 2 -->
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Team Meeting" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">Weekly Sync with the Dev Team</div>
+                    <img id="photo-week-2" src="https://via.placeholder.com/600x400" alt="Week 2" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">Week 2</div>
+                    <div class="upload-controls" style="padding: 10px; text-align: center;">
+                        <input type="file" accept="image/*" onchange="handleImageUpload(event, 'photo-week-2')" style="font-size: 0.8rem;">
+                    </div>
                 </div>
+
+                <!-- Week 3 -->
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Final Presentation" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">Presenting my Final OJT Project</div>
+                    <img id="photo-week-3" src="https://via.placeholder.com/600x400" alt="Week 3" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">Week 3</div>
+                    <div class="upload-controls" style="padding: 10px; text-align: center;">
+                        <input type="file" accept="image/*" onchange="handleImageUpload(event, 'photo-week-3')" style="font-size: 0.8rem;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Reports Section -->
+    <section id="reports" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Weekly Reports</h2>
+            <p class="section-subtitle">Upload or toggle to view weekly PDF report documents.</p>
+            
+            <div class="reports-grid" style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- Week 1 Report Card -->
+                <div class="report-card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <h3>Week 1 Report</h3>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <input type="file" accept="application/pdf" onchange="handlePdfUpload(event, 'pdf-frame-1', 'pdf-container-1')" style="font-size: 0.85rem;">
+                            <button class="btn primary" onclick="togglePdf('pdf-container-1')">Toggle Report PDF</button>
+                        </div>
+                    </div>
+                    <div id="pdf-container-1" class="pdf-container" style="display: none; margin-top: 15px;">
+                        <iframe id="pdf-frame-1" src="" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
+                    </div>
+                </div>
+
+                <!-- Week 2 Report Card -->
+                <div class="report-card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <h3>Week 2 Report</h3>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <input type="file" accept="application/pdf" onchange="handlePdfUpload(event, 'pdf-frame-2', 'pdf-container-2')" style="font-size: 0.85rem;">
+                            <button class="btn primary" onclick="togglePdf('pdf-container-2')">Toggle Report PDF</button>
+                        </div>
+                    </div>
+                    <div id="pdf-container-2" class="pdf-container" style="display: none; margin-top: 15px;">
+                        <iframe id="pdf-frame-2" src="" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
+                    </div>
+                </div>
+
+                <!-- Week 3 Report Card -->
+                <div class="report-card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <h3>Week 3 Report</h3>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <input type="file" accept="application/pdf" onchange="handlePdfUpload(event, 'pdf-frame-3', 'pdf-container-3')" style="font-size: 0.85rem;">
+                            <button class="btn primary" onclick="togglePdf('pdf-container-3')">Toggle Report PDF</button>
+                        </div>
+                    </div>
+                    <div id="pdf-container-3" class="pdf-container" style="display: none; margin-top: 15px;">
+                        <iframe id="pdf-frame-3" src="" width="100%" height="500px" style="border: 1px solid #ccc; border-radius: 6px;"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- OJT Documents Section -->
-    <section id="documents" class="section alt-bg">
+    <section id="documents" class="section">
         <div class="container">
             <h2 class="section-title">Official OJT Documents</h2>
             <div class="docs-grid">
@@ -151,9 +216,50 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 [Your Name]. Built from scratch for OJT Portfolio Submission.</p>
+        <p>&copy; 2026 Mark Joseph R. Mendez. Built from scratch for OJT Portfolio Submission.</p>
     </footer>
 
+    <!-- Custom JavaScript for PDF/Image Uploads and Toggling -->
+    <script>
+        // Toggle PDF view visibility
+        function togglePdf(containerId) {
+            const container = document.getElementById(containerId);
+            if (container.style.display === "none" || container.style.display === "") {
+                container.style.display = "block";
+            } else {
+                container.style.display = "none";
+            }
+        }
+
+        // Handle dynamic PDF uploads (preview instantly in browser)
+        function handlePdfUpload(event, iframeId, containerId) {
+            const file = event.target.files[0];
+            if (file && file.type === "application/pdf") {
+                const fileURL = URL.createObjectURL(file);
+                const iframe = document.getElementById(iframeId);
+                iframe.src = fileURL;
+                
+                // Show container upon upload
+                document.getElementById(containerId).style.display = "block";
+            } else {
+                alert("Please select a valid PDF file.");
+            }
+        }
+
+        // Handle dynamic Image uploads for Photo Documentation
+        function handleImageUpload(event, imgId) {
+            const file = event.target.files[0];
+            if (file && file.type.startsWith("image/")) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById(imgId).src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert("Please select a valid image file.");
+            }
+        }
+    </script>
     <script src="index.js"></script>
 </body>
 </html>
